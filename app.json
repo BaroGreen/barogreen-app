@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "BARO GREEN",
+    "slug": "barogreen",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+
+    
+    "splash": {
+      "resizeMode": "cover",
+      "backgroundColor": "#E8F6EE"
+    },
+
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "사진을 선택하고 사진의 위치 정보를 읽어 신고에 사용합니다.",
+          "cameraPermission": "사진을 촬영하여 신고에 사용합니다."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "지도의 주소 표시를 위해 위치 권한이 필요합니다.",
+        "NSPhotoLibraryUsageDescription": "사진을 선택하고 사진의 위치 정보를 읽어 표시합니다.",
+        "NSPhotoLibraryAddUsageDescription": "촬영한 사진을 앨범에 저장하는 데 필요합니다."
+      }
+    },
+    "android": {
+      "package": "com.anonymous.barogreen",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/items/logo.png",
+        "backgroundColor": "#E8F6EE"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_MEDIA_IMAGES",
+        "ACCESS_MEDIA_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

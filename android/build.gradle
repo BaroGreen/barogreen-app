@@ -1,0 +1,33 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+  // ✅ Kotlin만 2.1.0으로 올립니다. (KSP 제거)
+  ext {
+    kotlinVersion = '2.1.0'
+  }
+
+  repositories {
+    google()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath('com.android.tools.build:gradle')
+    classpath('com.facebook.react:react-native-gradle-plugin')
+    // ✅ Kotlin Gradle Plugin 2.1.0
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    // ❌ (삭제) KSP classpath
+    // classpath("com.google.devtools.ksp:com.google.devtools.ksp.gradle-plugin:2.1.0-1.0.29")
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    mavenCentral()
+    maven { url 'https://www.jitpack.io' }
+  }
+}
+
+apply plugin: "expo-root-project"
+apply plugin: "com.facebook.react.rootproject"
